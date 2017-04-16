@@ -9,8 +9,8 @@ namespace Domain.Entities
         public int Id { get; private set; } 
         public string Name { get; private set; } 
         public int Age { get; private set; } 
-        public string RegistrationCode { get; set; }
-        public IList<Subject> Subjects { get; set; }
+        public string RegistrationCode { get; private set; }
+        public IList<Subject> Subjects { get; private set; }
         public bool Approved => ComputeApproval(Subjects);
 
         private bool ComputeApproval(IList<Subject> subjects)
