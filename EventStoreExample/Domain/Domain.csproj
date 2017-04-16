@@ -49,6 +49,7 @@
     <Compile Include="Entities\Subject.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="ExtensionMethods\LinqExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

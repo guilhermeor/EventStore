@@ -1,4 +1,7 @@
-﻿namespace Domain.Entities
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace Domain.Entities
 {
     class Subject
     {

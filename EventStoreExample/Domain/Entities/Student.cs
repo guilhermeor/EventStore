@@ -10,12 +10,14 @@ namespace Domain.Entities
         public string Name { get; private set; } 
         public int Age { get; private set; } 
         public string RegistrationCode { get; private set; }
-        public IList<Subject> Subjects { get; private set; }
+        public IEnumerable<Subject> Subjects { get; private set; }
         public bool Approved => ComputeApproval(Subjects);
 
-        private bool ComputeApproval(IList<Subject> subjects)
+        private bool ComputeApproval(IEnumerable<Subject> subjects)
         {
-            return !subjects.Any(x => x.LetterGrade.Equals('D'));
+            return subjects.None(x=>x.LetterGrade.Equals('D'));
         }
     }
+
+
 }
