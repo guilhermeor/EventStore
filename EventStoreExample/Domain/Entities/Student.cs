@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Domain.Entities
 {
-    internal class Student : IEntity
+    public class Student : IEntity
     {    
         public int Id { get; private set; } 
         public string Name { get; private set; } 
@@ -13,10 +13,12 @@ namespace Domain.Entities
         public IEnumerable<Subject> Subjects { get; private set; }
         public bool Approved => ComputeApproval(Subjects);
 
-        private bool ComputeApproval(IEnumerable<Subject> subjects)
+        internal bool ComputeApproval(IEnumerable<Subject> subjects)
         {
             return subjects.None(x=>x.LetterGrade.Equals('D'));
         }
+
+        #region Commands
 
         internal Student(string name, int age, string registrationCode, IEnumerable<Subject> subjects)
         {
@@ -30,6 +32,12 @@ namespace Domain.Entities
         {
             return new Student(name, age, registrationCode, subjects);
         }
+        #endregion
+
+        #region Queries
+
+        #endregion
+
     }
 
 
