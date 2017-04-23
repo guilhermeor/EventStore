@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain
 {
@@ -14,7 +12,7 @@ namespace Domain
         }
 
         public static bool None<TSource>(this IEnumerable<TSource> source,
-                                 Func<TSource, bool> predicate)
+            Func<TSource, bool> predicate)
         {
             return !source.Any(predicate);
         }

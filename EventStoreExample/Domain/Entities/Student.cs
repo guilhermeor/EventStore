@@ -1,6 +1,7 @@
-﻿using Domain.Interfaces;
+﻿using System;
+using Domain.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
+using Domain.Events;
 
 namespace Domain.Entities
 {

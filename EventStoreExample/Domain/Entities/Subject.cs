@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Domain.Interfaces;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
     public class Subject
     {
-        public string Name { get; private set; }
-        public double Grade { get; private set; }
+        public string Name { get; }
+        public double Grade { get; }
         public char LetterGrade => ComputeLetterGrade(Grade);
 
         internal char ComputeLetterGrade(double grade)
@@ -29,9 +25,9 @@ namespace Domain.Entities
 
         public static Subject Create(string name, double grade)
         {
-
             return new Subject(name, grade);
         }
+
         #endregion
 
         #region Queries

@@ -2,8 +2,8 @@
 
 namespace Domain.Interfaces
 {
-    internal interface IEntity
+    public interface IEvent
     {
-        int Id { get; }
+        Guid Guid { get; }
     }
 }

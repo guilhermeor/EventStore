@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Domain</RootNamespace>
     <AssemblyName>Domain</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,8 +49,10 @@
   <ItemGroup>
     <Compile Include="Entities\Subject.cs" />
     <Compile Include="Entities\Student.cs" />
+    <Compile Include="Events\StudentEvents.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="ExtensionMethods\LinqExtensions.cs" />
+    <Compile Include="Interfaces\IEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
