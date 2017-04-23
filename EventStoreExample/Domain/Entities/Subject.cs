@@ -14,12 +14,9 @@ namespace Domain.Entities
         {
             if (grade >= 9)
                 return 'A';
-            else if (grade >= 7.5)
+            if (grade >= 7.5)
                 return 'B';
-            else if (grade >= 6)
-                return 'C';
-            else
-                return 'D';
+            return grade >= 6 ? 'C' : 'D';
         }
 
         #region Commands
@@ -32,6 +29,7 @@ namespace Domain.Entities
 
         public static Subject Create(string name, double grade)
         {
+
             return new Subject(name, grade);
         }
         #endregion

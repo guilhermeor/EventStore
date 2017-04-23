@@ -11,7 +11,6 @@ namespace EventStoreExample
     {
         private static void Main(string[] args)
         {
-            Console.ReadKey();
             var subjects = new List<Subject>
             {
                 Subject.Create("Mathmatics", 8.9),
@@ -19,6 +18,7 @@ namespace EventStoreExample
                 Subject.Create("Biological Sciences", 3.4)
             };
             var student = Student.Create("Guilherme", 25, "00206745", subjects);
+            Console.ReadKey();
         }
     }
 }
